@@ -16,6 +16,9 @@ HTML Elements
 Attributes
 * What is an attribute? - provides elements with extra information
 
+Browser tools
+* how to view html with browser tools
+
 ### Labs/Demos/In practice
 
 Core Tags Covered
@@ -39,3 +42,9 @@ Script tag (really basic javascript for demo purposes only, not covering javscri
 
 * style tag and attribute
 * link tag
+
+### Best Practices
+
+* keep it simple (avoid redudancy in elements)
+* good code styling (helps prevent missing closing tags)
+* browser support (html5 elements)
