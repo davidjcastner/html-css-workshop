@@ -18,6 +18,9 @@ CSS Attributes
 * colors (color picker)
 * units
 
+Browser tools
+* how to view style with browser tools and edit it in the broswer
+
 ### Fonts
 
 * font-types (google fonts)
