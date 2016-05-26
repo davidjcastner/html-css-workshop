@@ -28,94 +28,221 @@
       <div class="slides">
         <section data-markdown>
           <script type="text/template">
-            # Topics to cover for HTML
-          </script>
-        </section>
-        <section></section>
-        <section data-markdown>
-          <script type="text/template">
-            ### Core Concepts What is HTML * **H**yper**T**ext **M**arkup **L**anguage * It's a way of displaying data in a tree format. * The browsers define how to display the data. * HTML vs HTML5 - what's the difference? HTML Elements * What is an element? -
-            tags * Concepts: *innerhtml* and *closing* tags * Some elements do not have closing tags.
-          </script>
-        </section>
-        <section>
-          <pre><code data-trim data-noescape>
-        (def lazy-fib
-          (concat
-           [0 1]
-           <mark>((fn rfib [a b]</mark>
-                (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-            </code></pre>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ### Core Concepts (Cont.) **Attributes** What is an attribute? - provides elements with extra information **Browser tools** How do you view HTML with browser tools
+            ### Setup
+            In this workshop, you will be using chrome & codepen
+
+            Other browsers may work, but to make it easy use chrome
+
+            [Google Chrome](https://www.google.com/chrome/browser/desktop/)
+
+            [CodePen](https://codepen.io/)
+
+            Useful to keep open: [W3Schools HTML Reference](http://www.w3schools.com/tags/default.asp)
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Labs/Demos/In practice Core Tags * html, head, body * title * headers & paragraph * comments * image * tables HTML blocks vs inline * What is the difference? * div vs span
+            ## HTML Workshop
+
+            Meant to be an introduction
+
+            Recommended to take a full HTML tutorial
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Labs/Demos/In practice (cont.) Script tag (really basic javascript for demo purposes only, not covering javscript in this workshop) * Basic demo with setting innerHTML * Pusing buttons * Forms
+            ### What is HTML
+
+            **H**yper**T**ext **M**arkup **L**anguage ****
+
+            A way of displaying data in a tree format
+
+            Browsers define how to display the data
+
+            Three major components in HTML:
+            * Elements
+            * Data (innerHTML)
+            * Attributes
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Transistion to CSS * Style tag and attribute * Link tag
+            ### HTML Elements
+
+            An **Element** is a node of data in the tree
+
+            An **Element** is defined by opening and closing tags
+
+            The data inside the element is referred to as **innerHTML**
+
+            Some elements cannot have data (innerHTML) and they are officially called **void elements** but are also called **singletons**
+
+            **Elements** except the doctype element are case insensitive, but always use lowercase
+
+            Example: `<element></element>`
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Best Practices * keep it simple (avoid redudancy in elements) * good code styling (helps prevent missing closing tags) * browser support (HTML5 elements)
+            ### HTML Attributes
+
+            An **Attribute** provides an element with extra information
+
+            An **Attribute** is defined inside of the opening tag
+
+            **Attributes** are case insensitive, but always use lowercase
+
+            The value of an **Attribute** should be surrounded by quotes
+
+            Example: `<element attribute="somevalue"></element>`
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            # Topics to cover for css
+            ### HTML Data
+
+            **Data** or innerHTML is the information inside of an element
+
+            One or more elements can be data inside of another element
+
+            Example:
+            ```html
+            <element class="outer">
+              somedata
+              <element class="inner"></element>
+              <element class="inner"></element>
+            </element>
+            ```
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Core concepts What is css? * **C**ascading **S**tyle **S**heet * Style applies to all descendants of a HTML element! * What css can do? * Linking a stylesheet CSS Selectors * What is a selector? * all, element selector, id, class *
-            combining/descendants/direct relationship
+            ### Don't cross Tags
+
+            Example of what **not** to do
+            ```html
+            <h1>
+              <p>
+              </h1>
+            </p>
+            ```
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Core concepts (cont.) CSS Attributes * basic notation * colors (color picker) * units Browser tools * How do you view the styles with browser tools? * You can edit css directly in the broswer!
+            ### HTML Structure
+
+            ![tree view](http://www.w3schools.com/js/pic_htmltree.gif)
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Fonts * font-types *(google fonts)* * font-size * font-weight * color * text-align
+            ### Core Tags
+
+            Doctype: Used to tell that the data is html `<!DOCTYPE html>` included at the top of all html files
+
+            HTML: Data of this tag is considered html `<html></html>`
+
+            Head: Data inside head is not displayed but used to tell how to render data
+
+            Title: Used inside the head tag to give your webpage a title
+
+            Body: Data inside the body tag is content that will be displayed in the browser
+
+            Example: [HTML Structure](https://gist.github.com/davidjcastner/c9dacf0aa2a50401e56d12b061080b48)
+
+            Codepen defines all of these tags for you and anything to type will be inserted into the body element
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Background * background color * background image
+            ### MOAR TAGS
+
+            Basic tags:
+            * comments
+            * headers & paragraph
+            * lists
+            * anchors (links)
+            * image
+            * hr & br
+
+            View these in action: [HTML Tutorial Basic](http://codepen.io/davidjcastner/pen/vKBWjd)
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Size * width * height * max and min
+            ### HTML Lab
+
+            Create a website for your facts on your favorite animal on [CodePen](https://codepen.io/)
+
+            Include the following:
+            * a comment
+            * at least two headers
+            * a list of three facts about the animal
+            * an image of the animal
+            * a link to the wikipedia of the animal (or other factual site)
+
+            Example: [Sea Otter Page](http://codepen.io/davidjcastner/pen/PzYaYZ)
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Box Model * margin, border, padding, content * box-style !["Box Model in Chrome"](./lib/imgs/chromeboxmodel.png)
+            ### Blocks vs Inline
+
+            For displaying html, the elements are defined as blocks or inline (or both, but we'll cover that later)
+
+            The most basic block element for displaying data is div `<div></div>`
+
+            The most basic inline element for displaying data is span `<span></span>`
+
+            div and span are used mainly for the purpose of styling
+
+            Example: [HTML Tutorial Blocks](http://codepen.io/davidjcastner/pen/ZOzaMb)
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Positioning * display (block, inline, none) * visibility (difference between hidden and display none) * position * top, right, bottom, left
+            ### Scripts
+
+            Script tag is used for inserting javascript (not covered in this workshop)
+
+            But here is a quick example: [JS Basic Demo](http://codepen.io/davidjcastner/pen/WxeJKx)
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Best practices * don't use float * avoid using top, right, bottom, left * use the box styling method * use classes instead of id whenever possible * browser support
+            ### HTML vs HTML5
+
+            HTML5 is still HTML
+
+            HTML5 added defined new elements
+
+            Support for HTML5 is browser dependant, don't need to write html differently
+
+            Behavior of HTML5 on browser without support usually causes the elements to not display, but the it is considered to be undefined behavior
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Best Practices
+
+            * keep it simple (avoid redundancy in elements)
+            * practice good code styling (helps prevent missing closing tags)
+            * consider browser support
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Transistion to CSS
+
+            Style attribute
+
+            Style tag
+
+            Link tag
+
+            CodePen automatically links the stylesheet for you
+
           </script>
         </section>
       </div>

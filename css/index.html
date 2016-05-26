@@ -28,94 +28,221 @@
       <div class="slides">
         <section data-markdown>
           <script type="text/template">
-            # Topics to cover for HTML
-          </script>
-        </section>
-        <section></section>
-        <section data-markdown>
-          <script type="text/template">
-            ### Core Concepts What is HTML * **H**yper**T**ext **M**arkup **L**anguage * It's a way of displaying data in a tree format. * The browsers define how to display the data. * HTML vs HTML5 - what's the difference? HTML Elements * What is an element? -
-            tags * Concepts: *innerhtml* and *closing* tags * Some elements do not have closing tags.
-          </script>
-        </section>
-        <section>
-          <pre><code data-trim data-noescape>
-        (def lazy-fib
-          (concat
-           [0 1]
-           <mark>((fn rfib [a b]</mark>
-                (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-            </code></pre>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ### Core Concepts (Cont.) **Attributes** What is an attribute? - provides elements with extra information **Browser tools** How do you view HTML with browser tools
+            ### Setup
+
+            You can view the slides at: davidjcastner.github.io/html-css-workshop/css/
+
+            In this workshop, you will be using chrome & codepen
+
+            Other browsers may work, but to make it easy use chrome
+
+            [Google Chrome](https://www.google.com/chrome/browser/desktop/)
+
+            [Codepen](https://codepen.io/)
+
+            Useful to keep open: [W3Schools CSS Reference](http://www.w3schools.com/cssref/default.asp)
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Labs/Demos/In practice Core Tags * html, head, body * title * headers & paragraph * comments * image * tables HTML blocks vs inline * What is the difference? * div vs span
+            ## CSS Workshop
+
+            Meant to be an introduction
+
+            Recommended to take a full CSS tutorial
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Labs/Demos/In practice (cont.) Script tag (really basic javascript for demo purposes only, not covering javscript in this workshop) * Basic demo with setting innerHTML * Pusing buttons * Forms
+            ### What is CSS
+
+            **C**ascading **S**tyle **S**heet ****
+
+            [Cascading Example](http://codepen.io/davidjcastner/pen/vKBVxO?editors=1100)
+
+            Three major components in CSS
+            * Selector
+            * Property
+            * Property Value
+
+            Syntax: `selector { property: value; property: value; }`
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Transistion to CSS * Style tag and attribute * Link tag
+            ### Selector
+
+            Adds the styling to elements that match the selector
+
+            Three common selectors:
+            * `element {}` matches all elements of `element`
+            * `.class {}` matches all elements with a matching class
+            * `#id {}` matches the with a matching id
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Best Practices * keep it simple (avoid redudancy in elements) * good code styling (helps prevent missing closing tags) * browser support (HTML5 elements)
+            ### Colors (a property value)
+
+            Basic way to define a color is a 6 digit hexadecimal number
+
+            Example: `#ffffff` which is white
+
+            Other ways to define a color as well
+
+            Recommended to use a color palette [Example Palette](https://gist.github.com/davidjcastner/e4cfbabba7ecd16a5905d5edfd5c01ab)
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            # Topics to cover for css
+            ### Units (a property value)
+
+            For font-sizes use px or em (em is a ratio to the default font size)
+
+            For non font-sizes use px or % (% is a percentage of the parent element)
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Core concepts What is css? * **C**ascading **S**tyle **S**heet * Style applies to all descendants of a HTML element! * What css can do? * Linking a stylesheet CSS Selectors * What is a selector? * all, element selector, id, class *
+            ### Fonts
+
+            [Google Fonts](https://www.google.com/fonts) is an easy way to add a font, but it's not the only option
+
+            Font related properties
+            * font-family
+            * font-size
+            * font-weight
+            * color
+            * text-align
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### CSS Font Lab
+
+            Find a font that you enjoy and apply it to your animal site
+
+            Example: [Sea Otter Page](http://codepen.io/davidjcastner/pen/zBOmZM)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Background
+
+            * background-color
+            * background-image
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### CSS Background Lab
+
+            Wrap the different sections of your site with a div element
+
+            Add a background to different sections of your site and adjust the font color accordingly
+
+            Don't worry too much about the alignment and sizing of the backgrounds yet;
+
+            Example: [Sea Otter Page](http://codepen.io/davidjcastner/pen/xOKypN)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Size properties
+
+            * width
+            * height
+            * min-width, max-width
+            * min-height, max-height
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Box Model
+
+            ![Box Model](https://www.washington.edu/accesscomputing/webd2/student/unit3/images/boxmodel.gif)
+
+            * margin, border, padding, content
+            * box-style
+
+            margin, border, and padding can all be followed by:
+            * -top
+            * -right
+            * -down
+            * -left
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Browser Console
+
+            In chrome pressing f12 will open up the browser console
+
+            The console has many useful tools, so use it!
+
+            Styling Tools Demo
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### CSS Box Lab
+
+            Edit the margins, borders, and padding to help with the appearance
+
+            Some tips:
+            * make the margin for the section elements 0 (makes the background fill the area)
+            * add a padding to each section
+            * you can center a block by setting the left & right margin to auto
+
+            Example: [Sea Otter Page](http://codepen.io/davidjcastner/pen/aZoRKg)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Positioning
+
+            * display (block, inline, none)
+            * visibility (difference between hidden and display none)
+            * position
+            * top, right, bottom, left
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Best practices
+
+            * use normalize.css
+            * viewport tag
+            * when making a responsive site avoid the following:
+                * avoid defining a static width or height
+                * avoid using positions (top, right, bottom, left)
+            * use the box styling method
+            * use classes instead of id whenever possible
+            * pick a class naming convention
+            * consider browser support (autoprefixer)
+            * avoid using float, use flexbox instead
+            * if you have to create a site compatible with Internet Explorer, find a new job
+            * try to avoid redundancy and keep it simple
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Tips & Tricks
+
+            Tips & Tricks for better style:
+            * Adding a font & set of font sizes
+            * Uniform padding and margins
+            * Responsive blocks & centering blocks
+            * Use a slight gradient
+            * Use a premade color palette
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Advanced Selectors
+
+            If we have time
             combining/descendants/direct relationship
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ### Core concepts (cont.) CSS Attributes * basic notation * colors (color picker) * units Browser tools * How do you view the styles with browser tools? * You can edit css directly in the broswer!
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ### Fonts * font-types *(google fonts)* * font-size * font-weight * color * text-align
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ### Background * background color * background image
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ### Size * width * height * max and min
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ### Box Model * margin, border, padding, content * box-style !["Box Model in Chrome"](./lib/imgs/chromeboxmodel.png)
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ### Positioning * display (block, inline, none) * visibility (difference between hidden and display none) * position * top, right, bottom, left
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ### Best practices * don't use float * avoid using top, right, bottom, left * use the box styling method * use classes instead of id whenever possible * browser support
           </script>
         </section>
       </div>
