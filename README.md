@@ -1,2 +1,5 @@
-# html-css-workshop
-Workshop for html and css basics
+# HTML&CSS Workshop
+
+[HTML Slides](davidjcastner.github.io/html-css-workshop/html/)
+
+[CSS Slides](davidjcastner.github.io/html-css-workshop/css/)

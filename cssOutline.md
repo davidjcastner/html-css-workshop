@@ -1,6 +1,6 @@
 ### Setup
 
-You can view the slides at:
+You can view the slides at: davidjcastner.github.io/html-css-workshop/css/
 
 In this workshop, you will be using chrome & codepen
 
