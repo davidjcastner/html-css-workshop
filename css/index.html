@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Quick Intro to HTML and CSS</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <script type="text/template">
+            # Topics to cover for HTML
+          </script>
+        </section>
+        <section></section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Core Concepts What is HTML * **H**yper**T**ext **M**arkup **L**anguage * It's a way of displaying data in a tree format. * The browsers define how to display the data. * HTML vs HTML5 - what's the difference? HTML Elements * What is an element? -
+            tags * Concepts: *innerhtml* and *closing* tags * Some elements do not have closing tags.
+          </script>
+        </section>
+        <section>
+          <pre><code data-trim data-noescape>
+        (def lazy-fib
+          (concat
+           [0 1]
+           <mark>((fn rfib [a b]</mark>
+                (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+            </code></pre>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Core Concepts (Cont.) **Attributes** What is an attribute? - provides elements with extra information **Browser tools** How do you view HTML with browser tools
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Labs/Demos/In practice Core Tags * html, head, body * title * headers & paragraph * comments * image * tables HTML blocks vs inline * What is the difference? * div vs span
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Labs/Demos/In practice (cont.) Script tag (really basic javascript for demo purposes only, not covering javscript in this workshop) * Basic demo with setting innerHTML * Pusing buttons * Forms
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Transistion to CSS * Style tag and attribute * Link tag
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Best Practices * keep it simple (avoid redudancy in elements) * good code styling (helps prevent missing closing tags) * browser support (HTML5 elements)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            # Topics to cover for css
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Core concepts What is css? * **C**ascading **S**tyle **S**heet * Style applies to all descendants of a HTML element! * What css can do? * Linking a stylesheet CSS Selectors * What is a selector? * all, element selector, id, class *
+            combining/descendants/direct relationship
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Core concepts (cont.) CSS Attributes * basic notation * colors (color picker) * units Browser tools * How do you view the styles with browser tools? * You can edit css directly in the broswer!
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Fonts * font-types *(google fonts)* * font-size * font-weight * color * text-align
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Background * background color * background image
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Size * width * height * max and min
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Box Model * margin, border, padding, content * box-style !["Box Model in Chrome"](./lib/imgs/chromeboxmodel.png)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Positioning * display (block, inline, none) * visibility (difference between hidden and display none) * position * top, right, bottom, left
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Best practices * don't use float * avoid using top, right, bottom, left * use the box styling method * use classes instead of id whenever possible * browser support
+          </script>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          {
+            src: 'plugin/markdown/marked.js'
+          }, {
+            src: 'plugin/markdown/markdown.js'
+          }, {
+            src: 'plugin/notes/notes.js',
+            async: true
+          }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function () {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>
