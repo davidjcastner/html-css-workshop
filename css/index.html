@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Quick Intro to HTML and CSS</title>
+    <title>Quick Intro to CSS</title>
 
     <link rel="stylesheet" href="../assets/css/reveal.css">
     <link rel="stylesheet" href="../assets/css/theme/night.css">
@@ -18,8 +18,8 @@
       link.rel = 'stylesheet';
       link.type = 'text/css';
       link.href = window.location.search.match(/print-pdf/gi)
-        ? '../assets/css/print/pdf.css'
-        : '../assets/css/print/paper.css';
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
       document.getElementsByTagName('head')[0].appendChild(link);
     </script>
   </head>
@@ -29,16 +29,13 @@
         <section data-markdown>
           <script type="text/template">
             ### Setup
+            In this workshop, you will be using Chrome & CodePen
 
-            You can view the slides at: davidjcastner.github.io/html-css-workshop/css/
+            Other browsers may work, but to make it easy use Chrome
 
-            In this workshop, you will be using chrome & codepen
+            [Install Google Chrome](https://www.google.com/chrome/browser/desktop/)
 
-            Other browsers may work, but to make it easy use chrome
-
-            [Google Chrome](https://www.google.com/chrome/browser/desktop/)
-
-            [Codepen](https://codepen.io/)
+            [CodePen Link](https://codepen.io/)
 
             Useful to keep open: [W3Schools CSS Reference](http://www.w3schools.com/cssref/default.asp)
           </script>
@@ -56,7 +53,7 @@
           <script type="text/template">
             ### What is CSS
 
-            **C**ascading **S**tyle **S**heet ****
+            **C**ascading **S**tyle **S**heet
 
             [Cascading Example](http://codepen.io/davidjcastner/pen/vKBVxO?editors=1100)
 
@@ -165,6 +162,14 @@
             * margin, border, padding, content
             * box-style
 
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Box Model
+
+            ![Box Model](https://www.washington.edu/accesscomputing/webd2/student/unit3/images/boxmodel.gif)
+
             margin, border, and padding can all be followed by:
             * -top
             * -right
@@ -217,6 +222,12 @@
                 * avoid defining a static width or height
                 * avoid using positions (top, right, bottom, left)
             * use the box styling method
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### Best practices
+
             * use classes instead of id whenever possible
             * pick a class naming convention
             * consider browser support (autoprefixer)
@@ -243,6 +254,8 @@
 
             If we have time
             combining/descendants/direct relationship
+
+            [Additional Reading - 30 Selectors you should know about](http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
           </script>
         </section>
       </div>

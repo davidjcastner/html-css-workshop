@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Quick Intro to HTML and CSS</title>
+    <title>Quick Intro to HTML</title>
 
     <link rel="stylesheet" href="../assets/css/reveal.css">
     <link rel="stylesheet" href="../assets/css/theme/night.css">
@@ -18,8 +18,8 @@
       link.rel = 'stylesheet';
       link.type = 'text/css';
       link.href = window.location.search.match(/print-pdf/gi)
-        ? '../assets/css/print/pdf.css'
-        : '../assets/css/print/paper.css';
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
       document.getElementsByTagName('head')[0].appendChild(link);
     </script>
   </head>
@@ -29,13 +29,13 @@
         <section data-markdown>
           <script type="text/template">
             ### Setup
-            In this workshop, you will be using chrome & codepen
+            In this workshop, you will be using Chrome & CodePen
 
-            Other browsers may work, but to make it easy use chrome
+            Other browsers may work, but to make it easy use Chrome
 
-            [Google Chrome](https://www.google.com/chrome/browser/desktop/)
+            [Install Google Chrome](https://www.google.com/chrome/browser/desktop/)
 
-            [CodePen](https://codepen.io/)
+            [CodePen Link](https://codepen.io/)
 
             Useful to keep open: [W3Schools HTML Reference](http://www.w3schools.com/tags/default.asp)
           </script>
@@ -53,7 +53,7 @@
           <script type="text/template">
             ### What is HTML
 
-            **H**yper**T**ext **M**arkup **L**anguage ****
+            **H**yper**T**ext **M**arkup **L**anguage
 
             A way of displaying data in a tree format
 
@@ -75,9 +75,9 @@
 
             The data inside the element is referred to as **innerHTML**
 
-            Some elements cannot have data (innerHTML) and they are officially called **void elements** but are also called **singletons**
+            Some elements cannot have data (innerHTML) and they are officially called **void elements** (can also called **singletons**)
 
-            **Elements** except the doctype element are case insensitive, but always use lowercase
+            **Elements** (except the doctype element) are case insensitive, but always use lowercase
 
             Example: `<element></element>`
           </script>
@@ -135,24 +135,17 @@
             ![tree view](http://www.w3schools.com/js/pic_htmltree.gif)
           </script>
         </section>
-        <section data-markdown>
-          <script type="text/template">
-            ### Core Tags
+        <section>
+            <h3>Core Tags</h3>
+            <p class="fragment highlight-current-orange">Doctype: Used to tell that the data is html <code>&lt;!DOCTYPE html&gt;</code> included at the top of all html files</p>
+            <p class="fragment highlight-current-orange">HTML: Data of this tag is considered HTML <code>&lt;html&gt;&lt;/html&gt;</code></p>
+            <p class="fragment highlight-current-orange">Head: Data inside head is not displayed but used to tell how to render data</p>
+            <p class="fragment highlight-current-orange">Title: Used inside the head tag to give your webpage a title</p>
+            <p class="fragment highlight-current-orange">Body: Data inside the body tag is content that will be displayed in the browser</p>
 
-            Doctype: Used to tell that the data is html `<!DOCTYPE html>` included at the top of all html files
-
-            HTML: Data of this tag is considered html `<html></html>`
-
-            Head: Data inside head is not displayed but used to tell how to render data
-
-            Title: Used inside the head tag to give your webpage a title
-
-            Body: Data inside the body tag is content that will be displayed in the browser
-
-            Example: [HTML Structure](https://gist.github.com/davidjcastner/c9dacf0aa2a50401e56d12b061080b48)
-
-            Codepen defines all of these tags for you and anything to type will be inserted into the body element
-          </script>
+            <p class="fragment highlight-current-blue">Example: <a href="https://gist.github.com/davidjcastner/c9dacf0aa2a50401e56d12b061080b48">HTML Structure</a>
+              <br><br>
+            Codepen defines all of these tags for you and anything to type will be inserted into the body element</p>
         </section>
         <section data-markdown>
           <script type="text/template">
@@ -187,9 +180,9 @@
         </section>
         <section data-markdown>
           <script type="text/template">
-            ### Blocks vs Inline
+            ### Block vs Inline
 
-            For displaying html, the elements are defined as blocks or inline (or both, but we'll cover that later)
+            For displaying HTML, the elements are defined as blocks or inline (or both, but we'll cover that later)
 
             The most basic block element for displaying data is div `<div></div>`
 
@@ -217,7 +210,7 @@
 
             HTML5 added defined new elements
 
-            Support for HTML5 is browser dependant, don't need to write html differently
+            Support for HTML5 is browser dependant, don't need to write HTML differently
 
             Behavior of HTML5 on browser without support usually causes the elements to not display, but the it is considered to be undefined behavior
           </script>
@@ -242,6 +235,8 @@
             Link tag
 
             CodePen automatically links the stylesheet for you
+
+            [CSS Workshop Link](http://davidjcastner.github.io/html-css-workshop/css/)
 
           </script>
         </section>
